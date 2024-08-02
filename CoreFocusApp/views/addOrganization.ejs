@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Organization</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="container">
+        <br>
+        <div class="text-center"><h2>Add New Organization</h2></div>
+        <br>
+        <div class="text-center">
+            <form action="/addOrganization" method="POST">
+                <label for="name">Organization Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="description">Description:</label><br>
+                <input type="text" id="description" name="description" required><br><br>
+
+                <label for="contactEmail">Contact Email:</label><br>
+                <input type="text" id="contactEmail" name="contactEmail" required><br><br>
+
+                <button type="submit">Add Organization</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
